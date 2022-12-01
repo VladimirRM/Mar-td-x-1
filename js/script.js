@@ -24,7 +24,7 @@ function createDeleteElements(value) {
   li.addEventListener("click", (e) => {
     li.classList.toggle(li);
   });
-  total.textContent = i
+  total.textContent = i;
 
   result.appendChild(li);
 }
