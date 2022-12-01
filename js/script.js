@@ -4,6 +4,7 @@ const result = document.querySelector("#result");
 const total = document.querySelector("#total");
 
 btn.addEventListener("click", (e) => {
+  i++;
   if (input.value === "") return;
   createDeleteElements(input.value);
   input.value = "";
@@ -19,6 +20,9 @@ function createDeleteElements(value) {
   li.appendChild(btn);
 
   btn.addEventListener("click", (e) => {
+    i--;
+    total.textContent = i;
+
     result.removeChild(li);
   });
   li.addEventListener("click", (e) => {
