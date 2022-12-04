@@ -10,6 +10,8 @@ btn.addEventListener('click',(value)=>{
   input.value = ''
 })
 
-
+function createDeleteElements(e){
+    const li = document.createElement('li')
+}
 
 
