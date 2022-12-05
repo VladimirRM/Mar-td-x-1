@@ -11,6 +11,7 @@ btn.addEventListener("click", (e) => {
 });
 
 function createDeleteElements(value) {
+  i++;
   const li = document.createElement("li");
   li.className = "li";
   li.textContent = value;
@@ -20,11 +21,15 @@ function createDeleteElements(value) {
   li.appendChild(btn);
 
   btn.addEventListener("click", (e) => {
+    i--;
+    total.textContent = i;
     result.removeChild(li);
   });
   li.addEventListener("click", (e) => {
     li.classList.toggle("li-active");
   });
+
+  total.textContent = i;
 
   result.appendChild(li);
 }
