@@ -14,6 +14,13 @@ function createDeleteElements(value) {
   const li = document.createElement("li");
   li.className = "li";
   li.textContent = value;
+  const btn = document.createElement("button");
+  btn.className = "btn";
+  btn.textContent = "Delete";
+  li.appendChild(li);
+  result.appendChild(btn);
 
-  result.appendChild(li);
+  btn.addEventListener("click", (e) => {
+    result.removeChild(li);
+  });
 }
