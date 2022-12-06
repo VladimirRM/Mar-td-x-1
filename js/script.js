@@ -9,3 +9,11 @@ btn.addEventListener("click", (e) => {
   createDeleteElements(input.value);
   input.value = "";
 });
+
+function createDeleteElements(value) {
+  const li = document.createElement("li");
+  li.className = "li";
+  li.textContent = value;
+
+  result.appendChild(li);
+}
