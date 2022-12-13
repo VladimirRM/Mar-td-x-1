@@ -19,10 +19,12 @@ function createDeleteElements(value) {
   btn.textContent = "Delete";
   li.appendChild(btn);
 
-
-  btn.addEventListener('click',(e)=>{
-    result.removeChild(li)
-  })
+  btn.addEventListener("click", (e) => {
+    result.removeChild(li);
+  });
+  li.addEventListener("click", (e) => {
+    li.classList.toggle("li-active");
+  });
 
   result.appendChild(li);
 }
